@@ -18,7 +18,7 @@ const validator = function (form, schema) {
           if (!fn) return false;
 
           const rules = nodeRules[rule];
-          const isValid = fn.call(this, v, rules);
+          const isValid = fn.call(this, value, rules);
 
           if (isValid) return false;
 
@@ -35,7 +35,9 @@ const validator = function (form, schema) {
 
       state.errors[fieldName] = errors;
 
-      cb({ errors, value, node });
+      if (cb) {
+        cb({ errors, value, node });
+      }
     };
   };
 
