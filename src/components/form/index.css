@@ -1,0 +1,67 @@
+:root {
+  --primary: black;
+  --secondary: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+}
+
+.form__label {
+  margin-bottom: 25px;
+}
+
+.form__label-title {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.form__label-title span {
+  color: red;
+}
+
+.form__input {
+  height: 60px;
+  width: 100%;
+  border: 2px solid var(--primary);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.form__input[aria-invalid='true'] {
+  border-color: red;
+}
+
+.form__input[aria-invalid='true'] + .form__helper-text {
+  color: red;
+}
+
+.form__button {
+  height: 60px;
+  background: none;
+  border-radius: 5px;
+  border: 2px solid var(--primary);
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.form__button:hover:not(:disabled),
+.form__button:focus:not(:disabled) {
+  background-color: var(--primary);
+  color: var(--secondary);
+  transition: all 0.3s;
+}
+
+.form__button:disabled {
+  opacity: 0.5;
+}
+
+.form__helper-text {
+  font-size: 0.9rem;
+}

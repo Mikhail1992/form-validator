@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Custom form</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="form" autocomplete="off">
+        <label class="form__label">
+          <span class="form__label-title">Email <span>*</span></span>
+          <input
+            class="form__input"
+            id="email"
+            type="text"
+            name="email"
+            aria-required="true"
+            aria-invalid="false"
+          />
+          <span class="form__helper-text"></span>
+        </label>
+
+        <label class="form__label">
+          <span class="form__label-title">Password <span>*</span></span>
+          <input
+            class="form__input"
+            id="password"
+            type="password"
+            name="password"
+            aria-required="true"
+            aria-invalid="false"
+          />
+          <span class="form__helper-text"></span>
+        </label>
+
+        <input
+          class="form__button"
+          type="submit"
+          value="Submit"
+          aria-disabled="false"
+        />
+      </form>
+    </div>
+
+    <script async src="bundle.js"></script>
+  </body>
+</html>
