@@ -18,13 +18,11 @@ describe('form', () => {
 
   test('Should validate data - success', () => {
     // arrange
-    const form = document.querySelector('.form');
+    const form = document.querySelector('form');
     const email = form.querySelector('input[name="email"]');
-    const emailHelperText =
-      email.parentNode.querySelector('.form__helper-text');
+    const emailHelperText = email.nextSibling.nextSibling;
     const password = form.querySelector('input[name="password"]');
-    const passwordHelperText =
-      password.parentNode.querySelector('.form__helper-text');
+    const passwordHelperText = password.nextSibling.nextSibling;
     const button = form.querySelector('input[type="submit"]');
 
     const formInst = formComponent();
@@ -46,13 +44,11 @@ describe('form', () => {
 
   test('Should validate data - fail', () => {
     // arrange
-    const form = document.querySelector('.form');
+    const form = document.querySelector('form');
     const email = form.querySelector('input[name="email"]');
-    const emailHelperText =
-      email.parentNode.querySelector('.form__helper-text');
+    const emailHelperText = email.nextSibling.nextSibling;
     const password = form.querySelector('input[name="password"]');
-    const passwordHelperText =
-      password.parentNode.querySelector('.form__helper-text');
+    const passwordHelperText = password.nextSibling.nextSibling;
     const button = form.querySelector('input[type="submit"]');
 
     const formInst = formComponent();

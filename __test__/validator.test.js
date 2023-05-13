@@ -20,7 +20,7 @@ describe('validator', () => {
   test('Should validate email - fail', () => {
     // arrange
     const form = document.querySelector('form');
-    const email = document.querySelector('input[name="email"]');
+    const email = form.querySelector('input[name="email"]');
     const schema = {
       rules: {
         email: {
@@ -44,7 +44,7 @@ describe('validator', () => {
   test('Should validate email - success', () => {
     // arrange
     const form = document.querySelector('form');
-    const email = document.querySelector('input[name="email"]');
+    const email = form.querySelector('input[name="email"]');
     const schema = {
       rules: {
         email: {
@@ -67,7 +67,7 @@ describe('validator', () => {
   test('Should return custom error message', () => {
     // arrange
     const form = document.querySelector('form');
-    const password = document.querySelector('input[name="password"]');
+    const password = form.querySelector('input[name="password"]');
     const customErrorMessage = "Value doesn't exists";
     const schema = {
       rules: {
