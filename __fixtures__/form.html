@@ -1,15 +1,27 @@
-<form data-form>
-  <label data-field-container>
+<form action="" method="POST" autocomplete="off">
+  <label>
     Email:
-    <input id="email" type="text" name="email" />
-    <span data-field-message></span>
+    <input
+      id="email"
+      type="text"
+      name="email"
+      aria-required="true"
+      aria-invalid="false"
+    />
+    <span></span>
   </label>
 
-  <label data-field-container>
+  <label>
     Password:
-    <input id="password" type="password" name="password" />
-    <span data-field-message></span>
+    <input
+      id="password"
+      type="password"
+      name="password"
+      aria-required="true"
+      aria-invalid="false"
+    />
+    <span></span>
   </label>
 
-  <input type="submit" value="Submit" />
+  <input type="submit" value="Submit" aria-disabled="false" />
 </form>

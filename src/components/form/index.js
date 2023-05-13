@@ -48,17 +48,18 @@ const form = function () {
       }
     };
 
-    register('email', handleChange);
-    register('password', handleChange);
-
-    handleSubmit(async function (errors, data) {
+    const submit = async function (errors, data) {
       if (!errors.length) {
         await fetch('/test', {
           method: 'POST',
           body: data,
         });
       }
-    });
+    };
+
+    register('email', handleChange);
+    register('password', handleChange);
+    handleSubmit(submit);
   };
 
   const init = function () {

@@ -8,7 +8,13 @@ const validator = function (form, schema) {
 
   const handler = function (fieldName, node, cb) {
     const nodeRules = schema.rules[fieldName] || {};
+    let isFirstFocus = true;
     return function (e) {
+      if (isFirstFocus) {
+        isFirstFocus = false;
+        return;
+      }
+
       const value = e.target.value;
 
       const errors = Object.keys(nodeRules)
